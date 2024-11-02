@@ -1,0 +1,24 @@
+/* Estilos para los dados */
+.dice-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.dice img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.dice.roll #dado1-img, .dice.roll #dado2-img {
+    animation: rollDice 1s infinite;
+}
+
+@keyframes rollDice {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
+}
